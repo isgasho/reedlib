@@ -1,0 +1,8 @@
+*~
+*.bak
+
+/reed-decode
+/reed-encode
+
+/cmd/reed-decode/reed-decode
+/cmd/reed-encode/reed-encode
