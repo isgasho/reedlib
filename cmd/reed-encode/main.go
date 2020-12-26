@@ -86,7 +86,7 @@ func main() {
 	enc, err := reedsolomon.NewStream(dataShards, parityShards)
 	checkErr(err)
 
-	log.Debugf("Opening", fn)
+	log.Debugf("Opening %s", fn)
 	f, err := os.Open(fn)
 	checkErr(err)
 
@@ -101,7 +101,7 @@ func main() {
 	dir = filepath.Join(outputDirectory, dir)
 	for i := range out {
 		outfn := fmt.Sprintf("%s.%d", file, i)
-		log.Debugf("Creating", outfn)
+		log.Debugf("Creating %s", outfn)
 		out[i], err = os.Create(filepath.Join(dir, outfn))
 		checkErr(err)
 	}

@@ -103,7 +103,7 @@ func main() {
 		for i := range out {
 			if shards[i] == nil {
 				outfn := fmt.Sprintf("%s.%d", fn, i)
-				log.Debugf("Creating", outfn)
+				log.Debugf("Creating %s", outfn)
 				out[i], err = os.Create(outfn)
 				checkErr(err)
 			}
@@ -133,7 +133,7 @@ func main() {
 		outfn = fn
 	}
 
-	log.Debugf("Writing data to", outfn)
+	log.Debugf("Writing data to %s", outfn)
 	f, err := os.Create(outfn)
 	checkErr(err)
 
@@ -150,7 +150,7 @@ func openInput(dataShards, parityShards int, fn string) (r []io.Reader, size int
 	shards := make([]io.Reader, dataShards+parityShards)
 	for i := range shards {
 		infn := fmt.Sprintf("%s.%d", fn, i)
-		log.Debugf("Opening", infn)
+		log.Debugf("Opening %s", infn)
 		f, err := os.Open(infn)
 		if err != nil {
 			log.WithError(err).Warnf("Error reading file %s", infn)

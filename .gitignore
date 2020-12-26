@@ -6,3 +6,5 @@
 
 /cmd/reed-decode/reed-decode
 /cmd/reed-encode/reed-encode
+
+/testdata/*.[0-9]
