@@ -26,7 +26,7 @@ var (
 func init() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage: %s [options] basefile.ext\n", os.Args[0])
-		fmt.Fprintf(os.Stderr, "\nNOTE: Do not add the number to the filename.\n")
+		fmt.Fprintf(os.Stderr, "\nNOTE: Do not add the number to the filename.\n\n")
 		flag.PrintDefaults()
 	}
 
@@ -36,7 +36,7 @@ func init() {
 	// Basic options
 	flag.IntVarP(&dataShards, "data", "d", 3, "no. of data shards")
 	flag.IntVarP(&parityShards, "parity", "p", 1, "no. of parity shards")
-	flag.StringVarP(&outputFilename, "output", "o", ".", "output filename")
+	flag.StringVarP(&outputFilename, "output", "o", "", "output filename")
 }
 
 func flagNameFromEnvironmentName(s string) string {
