@@ -1,7 +1,7 @@
 # reedlib
 
 A high-level [Reed Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
-erease encoding library and set of command-line tools written in [Go](https://golang.org).
+erasure encoding library and set of command-line tools written in [Go](https://golang.org).
 
 ## Quick Start
 
