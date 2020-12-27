@@ -96,16 +96,22 @@ remaining shards.
 
 ## Notes
 
-This is a high-level wrapper library and set of command-line tools that uses @klauspost's [reedsolomon](https://github.com/klauspost/reedsolomon)
-lirbrary which itself is a Go port of the [JavaReedSolomon](https://github.com/Backblaze/JavaReedSolomon) library released by 
-[Backblaze](http://backblaze.com), with some additional optimizations.
+This is a high-level wrapper library and set of command-line tools that uses
+@klauspost's [reedsolomon](https://github.com/klauspost/reedsolomon) library
+which itself is a Go port of the [JavaReedSolomon](https://github.com/Backblaze/JavaReedSolomon)
+library released by [Backblaze](http://backblaze.com), with some additional
+optimizations.
 
 For an introduction on erasure coding, see the post on the [Backblaze blog](https://www.backblaze.com/blog/reed-solomon/).
 
 Some interesting properties to note:
 
-- The number of `data` + `parity` shards __MUST NOT__ exceed 256 as the default bit-field size is 8 for Reed Solomon erasure codes.
-- You can detect errors or recover from errors from up to `parity` shards. For example, with a data/parity of `3+1` you can recover from 1 lost or corrupt shard. WIth a data/parity of `3+2` you can recover from up to two shard failures.
+- The number of `data` + `parity` shards __MUST NOT__ exceed 256 as the
+  default bit-field size is 8 for Reed Solomon erasure codes.
+- You can detect errors or recover from errors from up to `parity` shards.
+  For example, with a data/parity of `3+1` you can recover from 1 lost or
+  corrupt shard. With a data/parity of `3+2` you can recover from up to two
+  shard failures.
 
 ## License
 
