@@ -97,7 +97,7 @@ remaining shards.
 ## Notes
 
 This is a high-level wrapper library and set of command-line tools that uses
-@klauspost's [reedsolomon](https://github.com/klauspost/reedsolomon) library
+@klauspost 's [reedsolomon](https://github.com/klauspost/reedsolomon) library
 which itself is a Go port of the [JavaReedSolomon](https://github.com/Backblaze/JavaReedSolomon)
 library released by [Backblaze](http://backblaze.com), with some additional
 optimizations.
